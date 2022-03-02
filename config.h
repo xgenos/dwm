@@ -22,8 +22,8 @@ static char normbgcolor[]           = "#080808";
 static char normbordercolor[]       = "#1a1a1a";
 static char normfgcolor[]           = "#e5e5e5";
 static char selfgcolor[]            = "#e5e5e5";
-static char selbordercolor[]        = "#1a1a1a";
-static char selbgcolor[]            = "#ff55aa";
+static char selbordercolor[]        = "#8e00ff";
+static char selbgcolor[]            = "#8e00ff";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -62,20 +62,20 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 /* symbol     arrange function */
-{ "[T]",      tile },			/* 0 first entry is default */
-{ "[M]",      monocle },		/* 1 */
-{ "[S]",      spiral },			/* 2 */
-{ "[DW]",     dwindle },		/* 3 */
-{ "[D]",      deck },			/* 4 */
-{ "[BS]",     bstack },			/* 5 */
-{ "[BSH]",    bstackhoriz },		/* 6 */
-{ "[G]",      grid },			/* 7 */
-{ "[RG]",     nrowgrid },		/* 8 */
-{ "[HG]",     horizgrid },		/* 9 */
-{ "[GG]",     gaplessgrid },		/* 10 */
-{ "[C]",      centeredmaster },		/* 11 */
-{ "[CF]",     centeredfloatingmaster },	/* 12 */
-{ "[F]",      NULL },			/* 13 no layout function means floating behavior */
+{ "[F]",      NULL },           /* 0 first entry is default */
+{ "[T]",      tile },			/* 1 */
+{ "[M]",      monocle },		/* 2 */
+{ "[S]",      spiral },			/* 3 */
+{ "[DW]",     dwindle },		/* 4 */
+{ "[D]",      deck },			/* 5 */
+{ "[BS]",     bstack },			/* 6 */
+{ "[BSH]",    bstackhoriz },		/* 7 */
+{ "[G]",      grid },			/* 8 */
+{ "[RG]",     nrowgrid },		/* 9 */
+{ "[HG]",     horizgrid },		/* 10 */
+{ "[GG]",     gaplessgrid },		/* 11 */
+{ "[C]",      centeredmaster },		/* 12 */
+{ "[CF]",     centeredfloatingmaster },	/* 13 */
 { NULL,       NULL },			/* 14 */
 };
 
@@ -114,18 +114,18 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,             		XK_w, 	   spawn,          {.v = webcmd } },
-	{ MODKEY,             		XK_e, 	   spawn,          {.v = emojicmd } },
+	{ MODKEY,             		    XK_w, 	   spawn,          {.v = webcmd } },
+	{ MODKEY,             		    XK_e, 	   spawn,          {.v = emojicmd } },
 	{ MODKEY|ShiftMask,           	XK_f, 	   spawn,          {.v = filescmd } },
 	{ MODKEY|ShiftMask,           	XK_m, 	   spawn,          {.v = audiocontrolcmd } },
-	{ MODKEY,             		XK_0, 	   spawn,          {.v = powermenu } },
+	{ MODKEY,             		    XK_0, 	   spawn,          {.v = powermenu } },
 	{ MODKEY|ShiftMask,             XK_w, 	   spawn,          {.v = bgset } },
 	{ MODKEY|Mod1Mask,              XK_w, 	   spawn,          {.v = chrscmd } },
 	{ MODKEY|ShiftMask,             XK_d, 	   spawn,          {.v = disset } },
 	{ MODKEY|Mod1Mask,              XK_d, 	   spawn,          {.v = disfix } },
-	{ MODKEY,			XK_F2,	   spawn,	   SHCMD("groff -mom $HOME/.local/share/dwm/gzdots.mom -T pdf | zathura -") },
-	{ MODKEY|ShiftMask,		XK_t,	   spawn,	   SHCMD(TERMINAL " -c cpomosai -e cpomosai") },
-	{ MODKEY,             		XK_b, 	   spawn,          {.v = sysinfo } },
+	{ MODKEY,		            	XK_F2,	   spawn,	   SHCMD("groff -mom $HOME/.local/share/dwm/gzdots.mom -T pdf | zathura -") },
+	{ MODKEY|ShiftMask,		        XK_t,	   spawn,	   SHCMD(TERMINAL " -c cpomosai -e cpomosai") },
+	{ MODKEY,             		    XK_b, 	   spawn,          {.v = sysinfo } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -134,22 +134,22 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
-	{ MODKEY,			XK_z,	   incrgaps,	   {.i = +3 } },
-	{ MODKEY,			XK_x,	   incrgaps,	   {.i = -3 } },
-	{ MODKEY,	                XK_a,      togglegaps,     {0} },
-	{ MODKEY|ShiftMask,    		XK_a,      defaultgaps,    {0} },
+	{ MODKEY,			            XK_z,	   incrgaps,	   {.i = +3 } },
+	{ MODKEY,			            XK_x,	   incrgaps,	   {.i = -3 } },
+	{ MODKEY,	                    XK_a,      togglegaps,     {0} },
+	{ MODKEY|ShiftMask,    		    XK_a,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,			XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[4]} },
-	{ MODKEY,                       XK_M,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_s,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[11]} },
+	{ MODKEY,			            XK_q,      killclient,     {0} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_s,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[12]} },
 	{ MODKEY,                       XK_space,  setlayout,      {.v = &layouts[13]} },
-	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,		    XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,             		XK_f,      togglefullscr,  {0} },
+	{ MODKEY,             		    XK_f,      togglefullscr,  {0} },
 	{ MODKEY|ControlMask,           XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_Left,   focusmon,       {.i = -1 } },
@@ -169,22 +169,22 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ 0,			        XK_Print,  spawn,          SHCMD("scrot ~/pic/allmon-$(date +%H:%M:%S).png --quality 100 --freeze") },
-	{ MODKEY,			XK_Print,  spawn,          {.v = shotmenu } },
-        { 0, XF86XK_AudioMute,			   spawn,	   SHCMD("pamixer -t") },
-	{ 0, XF86XK_AudioLowerVolume,		   spawn,	   SHCMD("pamixer --allow-boost -d 5") },
-	{ 0, XF86XK_AudioRaiseVolume,		   spawn,	   SHCMD("pamixer --allow-boost -i 5") },
-	{ MODKEY,			XK_F10,	   spawn,	   SHCMD("mpc volume 0") },
-	{ MODKEY,			XK_F11,	   spawn,	   SHCMD("mpc volume -5") },
-	{ MODKEY,			XK_F12,	   spawn,	   SHCMD("mpc volume +5") },
-	{ 0, XF86XK_AudioPrev,			   spawn,	   SHCMD("mpc prev && covernotify") },
-	{ 0, XF86XK_AudioNext,			   spawn,	   SHCMD("mpc next && covernotify") },
-	{ 0, XF86XK_AudioPlay,			   spawn,	   SHCMD("mpc toggle && covernotify") },
-	{ 0, XF86XK_AudioStop,			   spawn,	   SHCMD("mpc stop && covernotify") },
-	{ MODKEY,			XK_F5,	   spawn,	   SHCMD(TERMINAL " -e ncmpcpp") },
-	{ 0, XF86XK_Calculator,			   spawn,	   SHCMD(TERMINAL " -e bc -l") },
-	{ 0, XF86XK_MonBrightnessUp,		   spawn,	   SHCMD("xbacklight -inc 15") },
-	{ 0, XF86XK_MonBrightnessDown,		   spawn,	   SHCMD("xbacklight -dec 15") },
+	{ 0,			            XK_Print,           spawn,          SHCMD("scrot ~/pic/allmon-$(date +%H:%M:%S).png --quality 100 --freeze") },
+	{ MODKEY,			        XK_Print,           spawn,          {.v = shotmenu } },
+        { 0, XF86XK_AudioMute,			            spawn,	   SHCMD("pamixer -t") },
+	{ 0, XF86XK_AudioLowerVolume,		            spawn,	   SHCMD("pamixer --allow-boost -d 5") },
+	{ 0, XF86XK_AudioRaiseVolume,		            spawn,	   SHCMD("pamixer --allow-boost -i 5") },
+	{ MODKEY,			            XK_F10,	        spawn,	   SHCMD("mpc volume 0") },
+	{ MODKEY,			            XK_F11,	        spawn,	   SHCMD("mpc volume -5") },
+	{ MODKEY,			            XK_F12,	        spawn,	   SHCMD("mpc volume +5") },
+	{ 0, XF86XK_AudioPrev,			                spawn,	   SHCMD("mpc prev && covernotify") },
+	{ 0, XF86XK_AudioNext,			                spawn,	   SHCMD("mpc next && covernotify") },
+	{ 0, XF86XK_AudioPlay,			                spawn,	   SHCMD("mpc toggle && covernotify") },
+	{ 0, XF86XK_AudioStop,			                spawn,	   SHCMD("mpc stop && covernotify") },
+	{ MODKEY,			            XK_F5,	        spawn,	   SHCMD(TERMINAL " -e ncmpcpp") },
+	{ 0, XF86XK_Calculator,			                spawn,	   SHCMD(TERMINAL " -e bc -l") },
+	{ 0, XF86XK_MonBrightnessUp,		            spawn,	   SHCMD("xbacklight -inc 15") },
+	{ 0, XF86XK_MonBrightnessDown,		            spawn,	   SHCMD("xbacklight -dec 15") },
 	{ MODKEY|ShiftMask,             XK_F4,     quit,           {0} },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
