@@ -22,8 +22,8 @@ static char normbgcolor[]           = "#080808";
 static char normbordercolor[]       = "#1a1a1a";
 static char normfgcolor[]           = "#e5e5e5";
 static char selfgcolor[]            = "#e5e5e5";
-static char selbordercolor[]        = "#8e00ff";
-static char selbgcolor[]            = "#8e00ff";
+static char selbordercolor[]        = "#495d98";
+static char selbgcolor[]            = "#495d98";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -42,7 +42,7 @@ static const Rule rules[] = {
 	{ "Deadbeef",     	NULL,       NULL,       0,            1,           -1 },
 	{ "Gcolor3",     	NULL,       NULL,       0,            1,           -1 },
 	{ "Pavucontrol", 	NULL,       NULL,       0,            1,           -1 },
-	{ "Sxiv", 	 	NULL,       NULL,       0,            1,           -1 },
+	{ "Sxiv", 	 	    NULL,       NULL,       0,            1,           -1 },
 	{ "Pcmanfm", 	 	NULL,       NULL,       0,            1,           -1 },
 	{ "Zathura", 	 	NULL,       NULL,       0,            1,           -1 },
 	{ "blueman-manager",  	NULL,       NULL,       0,            1,           -1 },
@@ -113,7 +113,7 @@ static const char *audiocontrolcmd[] = { "pavucontrol", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,             		    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,             		    XK_w, 	   spawn,          {.v = webcmd } },
 	{ MODKEY,             		    XK_e, 	   spawn,          {.v = emojicmd } },
 	{ MODKEY|ShiftMask,           	XK_f, 	   spawn,          {.v = filescmd } },
