@@ -22,8 +22,8 @@ static char normbgcolor[]           = "#080808";
 static char normbordercolor[]       = "#1a1a1a";
 static char normfgcolor[]           = "#e5e5e5";
 static char selfgcolor[]            = "#e5e5e5";
-static char selbordercolor[]        = "#495d98";
-static char selbgcolor[]            = "#495d98";
+static char selbordercolor[]        = "#fc8617";
+static char selbgcolor[]            = "#fc8617";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -31,7 +31,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -99,7 +99,7 @@ static const char *cmdprintscreen[]  = { "scrot", "-d3", "/home/genos/Pictures/%
 static const char *emojicmd[] = { "emojidmenu", NULL };
 static const char *chrscmd[] = { "chrs", NULL };
 static const char *termcmd[] = { "st", NULL };
-static const char *webcmd[] = { "chromium", NULL };
+static const char *webcmd[] = { "firefox", NULL };
 static const char *filescmd[] = { "pcmanfm", NULL };
 static const char *powermenu[] = { "powermenu", NULL };
 static const char *shotmenu[] = { "shotmenu", NULL };
