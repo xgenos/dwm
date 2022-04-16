@@ -17,7 +17,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 27;       /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
-static const char *fonts[]          = { "FiraCode Nerd Font:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static const char *fonts[]          = { "JetBrains Mono:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static char normbgcolor[]           = "#080808";
 static char normbordercolor[]       = "#1a1a1a";
 static char normfgcolor[]           = "#e5e5e5";
@@ -31,7 +31,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -113,19 +113,19 @@ static const char *audiocontrolcmd[] = { "pavucontrol", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,             		    XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,             		    XK_w, 	   spawn,          {.v = webcmd } },
-	{ MODKEY,             		    XK_e, 	   spawn,          {.v = emojicmd } },
+	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,             		XK_w, 	   spawn,          {.v = webcmd } },
+	{ MODKEY,             		XK_e, 	   spawn,          {.v = emojicmd } },
 	{ MODKEY|ShiftMask,           	XK_f, 	   spawn,          {.v = filescmd } },
 	{ MODKEY|ShiftMask,           	XK_m, 	   spawn,          {.v = audiocontrolcmd } },
-	{ MODKEY,             		    XK_0, 	   spawn,          {.v = powermenu } },
+	{ MODKEY,             		XK_0, 	   spawn,          {.v = powermenu } },
 	{ MODKEY|ShiftMask,             XK_w, 	   spawn,          {.v = bgset } },
 	{ MODKEY|Mod1Mask,              XK_w, 	   spawn,          {.v = chrscmd } },
 	{ MODKEY|ShiftMask,             XK_d, 	   spawn,          {.v = disset } },
 	{ MODKEY|Mod1Mask,              XK_d, 	   spawn,          {.v = disfix } },
-	{ MODKEY,		            	XK_F2,	   spawn,	   SHCMD("groff -mom $HOME/.local/share/dwm/gzdots.mom -T pdf | zathura -") },
-	{ MODKEY|ShiftMask,		        XK_t,	   spawn,	   SHCMD(TERMINAL " -c cpomosai -e cpomosai") },
-	{ MODKEY,             		    XK_b, 	   spawn,          {.v = sysinfo } },
+	{ MODKEY,		        XK_F2,	   spawn,	   SHCMD("groff -mom $HOME/.local/share/dwm/gzdots.mom -T pdf | zathura -") },
+	{ MODKEY|ShiftMask,		XK_t,	   spawn,	   SHCMD(TERMINAL " -c cpomosai -e cpomosai") },
+	{ MODKEY,             		XK_b, 	   spawn,          {.v = sysinfo } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -136,8 +136,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,			            XK_z,	   incrgaps,	   {.i = +3 } },
 	{ MODKEY,			            XK_x,	   incrgaps,	   {.i = -3 } },
-	{ MODKEY,	                    XK_a,      togglegaps,     {0} },
-	{ MODKEY|ShiftMask,    		    XK_a,      defaultgaps,    {0} },
+	{ MODKEY,	                XK_a,      togglegaps,     {0} },
+	{ MODKEY|ShiftMask,    		XK_a,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,			            XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
@@ -146,10 +146,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[12]} },
 	{ MODKEY,                       XK_space,  setlayout,      {.v = &layouts[13]} },
-	{ MODKEY|ControlMask,		    XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,             		    XK_f,      togglefullscr,  {0} },
+	{ MODKEY,             		XK_f,      togglefullscr,  {0} },
 	{ MODKEY|ControlMask,           XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_Left,   focusmon,       {.i = -1 } },
@@ -157,7 +157,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Left,   tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Right,  tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_F1,     xrdb,           {.v = NULL } },
-    { MODKEY,                  PrintScreenDWM, spawn,          {.v = cmdprintscreen } },
+        { MODKEY|ShiftMask,             XK_s, spawn,          {.v = cmdprintscreen } },
 
 	/*{ MODKEY|Mod2Mask,              XK_f, 	   spawn,          {.v = flavorsel } },*/
 	TAGKEYS(                        XK_1,                      0)
@@ -169,39 +169,39 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ 0,			            XK_Print,           spawn,          SHCMD("scrot ~/pic/allmon-$(date +%H:%M:%S).png --quality 100 --freeze") },
-	{ MODKEY,			        XK_Print,           spawn,          {.v = shotmenu } },
+	{ 0,			        XK_Print,           spawn,          SHCMD("scrot ~/Pictures/allmon-$(date +%H:%M:%S).png --quality 100 --freeze") },
+	{ MODKEY,			XK_Print,           spawn,          {.v = shotmenu } },
         { 0, XF86XK_AudioMute,			            spawn,	   SHCMD("pamixer -t") },
 	{ 0, XF86XK_AudioLowerVolume,		            spawn,	   SHCMD("pamixer --allow-boost -d 5") },
 	{ 0, XF86XK_AudioRaiseVolume,		            spawn,	   SHCMD("pamixer --allow-boost -i 5") },
-	{ MODKEY,			            XK_F10,	        spawn,	   SHCMD("mpc volume 0") },
-	{ MODKEY,			            XK_F11,	        spawn,	   SHCMD("mpc volume -5") },
-	{ MODKEY,			            XK_F12,	        spawn,	   SHCMD("mpc volume +5") },
+	{ MODKEY,			XK_F10,	        spawn,	   SHCMD("mpc volume 0") },
+	{ MODKEY,			XK_F11,	        spawn,	   SHCMD("mpc volume -5") },
+	{ MODKEY,			XK_F12,	        spawn,	   SHCMD("mpc volume +5") },
 	{ 0, XF86XK_AudioPrev,			                spawn,	   SHCMD("mpc prev && covernotify") },
 	{ 0, XF86XK_AudioNext,			                spawn,	   SHCMD("mpc next && covernotify") },
 	{ 0, XF86XK_AudioPlay,			                spawn,	   SHCMD("mpc toggle && covernotify") },
 	{ 0, XF86XK_AudioStop,			                spawn,	   SHCMD("mpc stop && covernotify") },
-	{ MODKEY,			            XK_F5,	        spawn,	   SHCMD(TERMINAL " -e ncmpcpp") },
+	{ MODKEY,			XK_F5,	        spawn,	   SHCMD(TERMINAL " -e ncmpcpp") },
 	{ 0, XF86XK_Calculator,			                spawn,	   SHCMD(TERMINAL " -e bc -l") },
 	{ 0, XF86XK_MonBrightnessUp,		            spawn,	   SHCMD("xbacklight -inc 15") },
 	{ 0, XF86XK_MonBrightnessDown,		            spawn,	   SHCMD("xbacklight -dec 15") },
 	{ MODKEY|ShiftMask,             XK_F4,     quit,           {0} },
 
-	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
-	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */
-	/* { MODKEY|Mod4Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } }, */
-	/* { MODKEY|Mod4Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -1 } }, */
-	/* { MODKEY|Mod4Mask|ControlMask,  XK_h,      incrigaps,      {.i = +1 } }, */
-	/* { MODKEY|Mod4Mask|ControlMask,  XK_l,      incrigaps,      {.i = -1 } }, */
-	/* { MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} }, */
-	/* { MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } }, */
-	/* { MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } }, */
-	/* { MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } }, */
-	/* { MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } }, */
-	/* { MODKEY|Mod4Mask,              XK_y,      incrohgaps,     {.i = +1 } }, */
-	/* { MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } }, */
-	/* { MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } }, */
-	/* { MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } }, */
+	/* { MODKEY|Mod4Mask,           XK_h,      incrgaps,       {.i = +1 } }, */
+	/* { MODKEY|Mod4Mask,           XK_l,      incrgaps,       {.i = -1 } }, */
+	/* { MODKEY|Mod4Mask|ShiftMask, XK_h,      incrogaps,      {.i = +1 } }, */
+	/* { MODKEY|Mod4Mask|ShiftMask, XK_l,      incrogaps,      {.i = -1 } }, */
+	/* { MODKEY|Mod4Mask|ControlMask, XK_h,      incrigaps,      {.i = +1 } }, */
+	/* { MODKEY|Mod4Mask|ControlMask, XK_l,      incrigaps,      {.i = -1 } }, */
+	/* { MODKEY|Mod4Mask|ShiftMask, XK_0,      defaultgaps,    {0} }, */
+	/* { MODKEY,                    XK_y,      incrihgaps,     {.i = +1 } }, */
+	/* { MODKEY,                    XK_o,      incrihgaps,     {.i = -1 } }, */
+	/* { MODKEY|ControlMask,        XK_y,      incrivgaps,     {.i = +1 } }, */
+	/* { MODKEY|ControlMask,        XK_o,      incrivgaps,     {.i = -1 } }, */
+	/* { MODKEY|Mod4Mask,           XK_y,      incrohgaps,     {.i = +1 } }, */
+	/* { MODKEY|Mod4Mask,           XK_o,      incrohgaps,     {.i = -1 } }, */
+	/* { MODKEY|ShiftMask,          XK_y,      incrovgaps,     {.i = +1 } }, */
+	/* { MODKEY|ShiftMask,          XK_o,      incrovgaps,     {.i = -1 } }, */
 };
 
 
