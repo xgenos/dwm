@@ -1,8 +1,8 @@
 # Biswa's build of dwm
 
-## DMENU
+## DWM
 
-<img src="dmenu.png">
+<img align="center" src="dwm.png">
 
 ## FAQ
 
