@@ -3,6 +3,8 @@
 ## DWM
 
 <img align="center" src="rice.png">
+<img align="center" src="app.png">
+
 
 ## FAQ
 
