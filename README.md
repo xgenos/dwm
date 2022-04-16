@@ -11,7 +11,7 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 
 ## Patches and features
 
-- [Clickable statusbar](https://dwm.suckless.org/patches/statuscmd/) with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
+- [Clickable statusbar](https://dwm.suckless.org/patches/statuscmd/) with my build of [dwmblocks](https://github.com/xgenos/dwmblocks).
 - Reads [xresources](https://dwm.suckless.org/patches/xresources/) colors/variables (i.e. works with `pywal`, etc.).
 - scratchpad: Accessible with mod+shift+enter.
 - New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys `super+(shift+)t/y/u/i`.
@@ -25,7 +25,7 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 ## Installation for newbs
 
 ```
-git clone https://github.com/LukeSmithxyz/dwm
+git clone https://github.com/xgenos/dwm
 cd dwm
 sudo make install
 ```
