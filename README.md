@@ -1,5 +1,9 @@
 # Biswa's build of dwm
 
+## DMENU
+
+<img src="dmenu.png">
+
 ## FAQ
 
 > What are the bindings?
