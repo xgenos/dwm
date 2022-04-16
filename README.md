@@ -2,7 +2,7 @@
 
 ## DWM
 
-<img align="center" src="dwm.png">
+<img align="center" src="rice.png">
 
 ## FAQ
 
