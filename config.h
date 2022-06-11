@@ -65,6 +65,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont};
 static const char *termcmd[]  = { "st", NULL };
+static const char *screenshot[] = {"scrot", "/home/genos/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,6 +96,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_equal,  setgaps,	   {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_equal,  setgaps,	   {.i =  0 } },
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
+	{ MODKEY|ShiftMask,		XK_S,  	   spawn,	   {.v = screenshot} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
