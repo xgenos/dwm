@@ -1,21 +1,3 @@
-## DWM images
-
-<p align='center'>
-  <a href="#"><img align="center" src="/img/wallpaper.png" alt="xgenos" /></a>
-</p>
-
-<p align='center'>
-  <a href="#"><img align="center" src="/img/dunst.png" alt="xgenos" /></a>
-</p>
-
-<p align='center'>
-  <a href="#"><img align="center" src="/img/powermenu.png" alt="xgenos" /></a>
-</p>
-
-<p align='center'>
-  <a href="#"><img align="center" src="/img/apps.png" alt="xgenos" /></a>
-</p>
-
 ## dwm - dynamic window manager
 
 -> dwm is an extremely fast, small, and dynamic window manager for X.
@@ -64,3 +46,21 @@ like this in your .xinitrc:
 
 -> The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+## DWM images
+
+<p align='center'>
+  <a href="#"><img align="center" src="/img/wallpaper.png" alt="xgenos" /></a>
+</p>
+
+<p align='center'>
+  <a href="#"><img align="center" src="/img/dunst.png" alt="xgenos" /></a>
+</p>
+
+<p align='center'>
+  <a href="#"><img align="center" src="/img/powermenu.png" alt="xgenos" /></a>
+</p>
+
+<p align='center'>
+  <a href="#"><img align="center" src="/img/apps.png" alt="xgenos" /></a>
+</p>
