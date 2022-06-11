@@ -49,10 +49,10 @@ and (re)compiling the source code.
 
 ## DWM images
 
-<a href="#"><img align="center" src="/img/wallpaper.png" alt="xgenos" /></a>
+<a href="#"><img align="center" src="/img/wallpaper.jpg" alt="xgenos" /></a>
 
-<a href="#"><img align="center" src="/img/dunst.png" alt="xgenos" /></a>
+<a href="#"><img align="center" src="/img/dunst.jpg" alt="xgenos" /></a>
 
-<a href="#"><img align="center" src="/img/powermenu.png" alt="xgenos" /></a>
+<a href="#"><img align="center" src="/img/powermenu.jpg" alt="xgenos" /></a>
 
-<a href="#"><img align="center" src="/img/apps.png" alt="xgenos" /></a>
+<a href="#"><img align="center" src="/img/apps.jpg" alt="xgenos" /></a>
